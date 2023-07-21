@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+source-template/
+collectstatic/
+CACHE/
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+settings.ini
+
+# mkdocs documentation
+media/upload/
+
+# mypy
+settings.ini
+.vscode/
