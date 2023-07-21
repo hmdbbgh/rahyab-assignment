@@ -18,7 +18,9 @@ INSTALLED_APPS.extend([
 # CUSTOM PROJECT #
 # ############## #
 INSTALLED_APPS.extend([
-    'apps.authentication.apps.AuthenticationConfig'
+    'utils',
+    'apps.user.apps.UserConfig',
+    'apps.authentication.apps.AuthenticationConfig',
 ])
 
 # ###################### #
