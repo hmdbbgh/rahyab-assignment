@@ -90,8 +90,10 @@ Step 6.
 
 Step 7.
 ~~~~~~~
-**Docker compose up**
+**Docker compose up:**
+
 .. code-block:: bash
+
     docker-compose -f docker-compose.yml up -d
 
 Step 8.
@@ -130,4 +132,4 @@ Step 11.
 
 Tips
 ----
-We used Redis and Celery and RabbitMQ to reduce the number of read and write requests to the database for obtaining the view count of an announcement."
+We used Redis and Celery and RabbitMQ to reduce the number of read and write requests to the database for obtaining the views count of an announcement."
