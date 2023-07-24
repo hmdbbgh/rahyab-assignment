@@ -1,6 +1,7 @@
 from django.urls import path
 
 from .apis import (
+    UserAnnouncementsAPI,
     AnnouncementAcceptAPI,
     AnnouncementDetailAPI,
     AnnouncementSearchAPI,
@@ -13,6 +14,11 @@ app_name = "apps.announcement"
 
 
 urlpatterns = [
+    path(
+        'my-announcements/',
+        UserAnnouncementsAPI.as_view(),
+        name='my-announcements'
+    ),
     path(
         'announcements/',
         AnnouncementListCreateAPI.as_view(),

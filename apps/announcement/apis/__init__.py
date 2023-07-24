@@ -1,3 +1,4 @@
+from .user import UserAnnouncementsAPI
 from .accept import AnnouncementAcceptAPI
 from .search import AnnouncementSearchAPI
 from .views_count import AnnouncementViewsCountAPI

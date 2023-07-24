@@ -1,7 +1,11 @@
 from django.core.cache import cache
 from django.db.models import QuerySet
+from django.contrib.auth import get_user_model
 
 from .models import Announcement
+
+
+User = get_user_model()
 
 
 def get_announcements() -> QuerySet[Announcement]:
@@ -27,6 +31,13 @@ def get_announcement(*, pk: int) -> Announcement | None:
         return get_announcements().get(pk=pk)
     except:
         return None
+
+
+def get_user_announcements(*, user: User) -> QuerySet[Announcement]:
+
+    return Announcement.objects.filter(
+        user=user,
+    )
 
 
 def search_announcements(*, search_text: str) -> QuerySet[Announcement]:
