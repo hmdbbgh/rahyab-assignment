@@ -16,10 +16,6 @@ class Profile(TimeStampedModel):
         verbose_name=_('User'),
         on_delete=models.CASCADE
     )
-    announcements_count = models.PositiveIntegerField(
-        _("Announcements Count"),
-        default=0
-    )
     bio = models.CharField(
         _("Bio"),
         max_length=1000,

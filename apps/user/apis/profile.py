@@ -18,7 +18,7 @@ class ProfileApi(ApiAuthMixin, APIView):
     class OutPutSerializer(serializers.ModelSerializer):
         class Meta:
             model = Profile
-            fields = ("bio", "announcements_count")
+            fields = ("bio")
 
     @extend_schema(responses=OutPutSerializer)
     def get(self, request):
