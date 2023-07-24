@@ -132,4 +132,9 @@ Step 11.
 
 Tips
 ----
-We used Redis and Celery and RabbitMQ to reduce the number of read and write requests to the database for obtaining the views count of an announcement."
+1. We used Redis and Celery and RabbitMQ to reduce the number of read and write requests to the database for obtaining the views count of an announcement."
+
+2. You can use the following command to add periodic tasks to Celery:
+    .. code-block:: bash
+
+        python manage.py setup_periodic_tasks
