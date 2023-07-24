@@ -94,5 +94,6 @@ class RegisterApi(APIView):
             self.OutPutRegisterSerializer(
                 user,
                 context={"request": request}
-            ).data
+            ).data,
+            status=status.HTTP_201_CREATED
         )

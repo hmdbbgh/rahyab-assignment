@@ -32,3 +32,45 @@ FILE_UPLOAD_PERMISSIONS = 0o755
 FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o755
 FILE_UPLOAD_MAX_MEMORY_SIZE = config('FILE_UPLOAD_MAX_MEMORY_SIZE', cast=int)
 MAX_UPLOAD_SIZE = config('MAX_UPLOAD_SIZE', cast=int)
+
+
+# ######################### #
+#           REDIS           #
+# ######################### #
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': config(
+            "REDIS_LOCATION",
+            default="redis://localhost:6379"
+        ),
+    }
+}
+CACHE_TTL = 60 * 15
+
+
+# ######################### #
+#          CELERY           #
+# ######################### #
+CELERY_TASK_ALWAYS_EAGER = True
+CELERY_BROKER_BACKEND = "memory"
+CELERY_TASK_EAGER_PROPAGATES = True
+
+CELERY_BROKER_URL = config(
+    'CELERY_BROKER_URL',
+    default='amqp://guest:guest@localhost:5672//'
+)
+
+CELERY_TIMEZONE = 'UTC'
+CELERT_TASK_TIME_LIMIT = 30  # seconds
+CELERY_TASK_MAX_RETRIES = 3
+CELERY_TASK_SOFT_TIME_LIMIT = 20  # seconds
+
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_BEAT_SCHEDULE = {
+    'notify_customers': {
+        'task': 'config.tasks.notify_customers',
+        'schedule': 500,
+        'args': ['Hello World'],
+    }
+}

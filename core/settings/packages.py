@@ -12,6 +12,8 @@ INSTALLED_APPS.extend([
     'rest_framework',
     'django_filters',
     'drf_spectacular',
+    'django_celery_results',
+    'django_celery_beat',
 ])
 
 # ############## #
@@ -20,7 +22,9 @@ INSTALLED_APPS.extend([
 INSTALLED_APPS.extend([
     'utils',
     'apps.user.apps.UserConfig',
+    'apps.announcement.apps.AnnouncementConfig',
     'apps.authentication.apps.AuthenticationConfig',
+    'apps.tasks.apps.TasksConfig',
 ])
 
 # ###################### #
@@ -30,7 +34,6 @@ INSTALLED_APPS.extend([
 ALLOW_UNICODE_SLUGS = True
 
 AUTHENTICATION_BACKENDS = [
-    # Django ModelBackend is the default authentication backend.
     'django.contrib.auth.backends.ModelBackend',
 ]
 
