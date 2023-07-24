@@ -6,6 +6,6 @@ from .apis import (
 
 
 urlpatterns = [
-    path('register/', RegisterApi.as_view(), name="register"),
+    path('sign-up/', RegisterApi.as_view(), name="register"),
     path('profile/', ProfileApi.as_view(), name="profile"),
 ]
