@@ -46,7 +46,7 @@ class TestAnnouncementListCreateAPI(BaseAPITest):
         response = self.client.post(self.create_list_url, self.data)
         self.assertEqual(
             response.status_code,
-            status.HTTP_403_FORBIDDEN
+            status.HTTP_401_UNAUTHORIZED
         )
 
     def test_create_announcements_authenticated(self):
