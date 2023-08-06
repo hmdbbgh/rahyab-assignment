@@ -1,0 +1,65 @@
+تسک پیشنهادی:
+
+Login API:
+
+روت: /api/login/
+نوع درخواست: POST
+پارامترهای ورودی: نام کاربری (username) و رمز عبور (password)
+نمونه پاسخ: توکن دسترسی (access token) برای استفاده در درخواست‌های بعدی
+Sign-up API:
+
+روت: /api/sign-up/
+نوع درخواست: POST
+پارامترهای ورودی: نام کاربری (username)، رمز عبور (password)، ایمیل (email) و سایر اطلاعات مورد نیاز برای ثبت نام
+نمونه پاسخ: موفقیت ثبت نام و اطلاعات کاربر
+Insert Announcement API:
+
+روت: /api/announcements/
+نوع درخواست: POST
+پارامترهای ورودی: عنوان (title)، متن (content) و سایر اطلاعات مورد نیاز برای ثبت آگهی
+نمونه پاسخ: موفقیت ثبت آگهی و اطلاعات آگهی
+Accept Announcement by Admin API:
+
+روت: /api/announcements/{announcement_id}/accept/
+نوع درخواست: POST
+پارامترهای ورودی: شناسه آگهی (announcement_id)
+نمونه پاسخ: موفقیت تأیید آگهی
+Update Announcement API:
+
+روت: /api/announcements/{announcement_id}/
+نوع درخواست: PUT
+پارامترهای ورودی: شناسه آگهی (announcement_id) و اطلاعات جدید آگهی
+نمونه پاسخ: موفقیت به‌روزرسانی آگهی
+Delete Announcement API:
+
+روت: /api/announcements/{announcement_id}/
+نوع درخواست: DELETE
+پارامترهای ورودی: شناسه آگهی (announcement_id)
+نمونه پاسخ: موفقیت حذف آگهی
+List Announcements API:
+
+روت: /api/announcements/
+نوع درخواست: GET
+نمونه پاسخ: لیست آگهی‌ها
+Search Announcements API:
+
+روت: /api/announcements/search/
+نوع درخواست: GET
+پارامترهای ورودی: عبارت جستجو (query)
+نمونه پاسخ: لیست آگهی‌های مطابق با عبارت جستجو
+Number of Views API:
+
+روت: /api/announcements/{announcement_id}/views/
+نوع درخواست: GET
+پارامترهای ورودی: شناسه آگهی (announcement_id)
+نمونه پاسخ: تعداد بازدیدها برای آگهی مورد نظر
+Profile API:
+
+روت: /api/profile/
+نوع درخواست: GET
+نمونه پاسخ: اطلاعات پروفایل کاربر
+My Announcements API:
+
+روت: /api/my-announcements/
+نوع درخواست: GET
+نمونه پاسخ: لیست آگهی‌های کاربر مربوطه
